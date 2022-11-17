@@ -1,0 +1,455 @@
+"'1_Galeria' As screen":
+    Fill: =RGBA(29, 29, 29, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    Orientation: =If('1_Galeria'.Width < '1_Galeria'.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= '1_Galeria'.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Image1_9 As image:
+        AccessibleLabel: =
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =Image1_9.BorderColor
+        Height: =643
+        HoverBorderColor: =ColorFade(Image1_9.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_9.Fill, 20%)
+        Image: =cosentinoxl
+        PressedBorderColor: =ColorFade(Image1_9.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_9.Fill, -20%)
+        Transparency: =0.9
+        Width: =640
+        Y: =329
+        ZIndex: =1
+
+    RectQuickActionBar1_5 As rectangle:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledFill: =RectQuickActionBar1_5.Fill
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =RectQuickActionBar1_5.BorderColor
+        Height: =88
+        HoverFill: =RectQuickActionBar1_5.Fill
+        PressedFill: =RectQuickActionBar1_5.Fill
+        Width: =Parent.Width
+        ZIndex: =2
+
+    LblAppName1_5 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(58, 58, 58, 0)
+        FocusedBorderColor: =LblAppName1_5.BorderColor
+        Height: =88
+        HoverBorderColor: =LblAppName1_5.BorderColor
+        HoverColor: =LblAppName1_5.Color
+        HoverFill: =LblAppName1_5.Fill
+        PressedBorderColor: =LblAppName1_5.BorderColor
+        PressedColor: =LblAppName1_5.Color
+        PressedFill: =LblAppName1_5.Fill
+        Size: =27
+        Text: ="Galeria"
+        Width: =Parent.Width - LblAppName1_5.X - IconSortUpDown1.Width - IconNewItem1.Width - IconRefresh1.Width
+        Wrap: =false
+        X: =120
+        ZIndex: =3
+
+    IconRefresh1_5 As icon.Reload:
+        AccessibleLabel: =IconRefresh1_5.Tooltip
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconRefresh1_5.Fill
+        FocusedBorderColor: =IconRefresh1_5.BorderColor
+        Height: =88
+        HoverBorderColor: =ColorFade(IconRefresh1_5.BorderColor, 20%)
+        HoverColor: =ColorFade(IconRefresh1_5.Color, 20%)
+        HoverFill: =IconRefresh1_5.Fill
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Images)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        PressedBorderColor: =ColorFade(IconRefresh1_5.BorderColor, -20%)
+        PressedColor: =ColorFade(IconRefresh1_5.Color, -20%)
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        TabIndex: =0
+        Tooltip: ="Atualizar lista"
+        Width: =88
+        X: =Parent.Width - IconNewItem1.Width - IconSortUpDown1.Width - IconRefresh1_5.Width
+        ZIndex: =4
+
+    IconSortUpDown1_5 As icon.ArrowsUpDown:
+        AccessibleLabel: =IconSortUpDown1_5.Tooltip
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconSortUpDown1_5.Fill
+        FocusedBorderColor: =IconSortUpDown1_5.BorderColor
+        Height: =88
+        HoverBorderColor: =ColorFade(IconSortUpDown1_5.BorderColor, 20%)
+        HoverColor: =ColorFade(IconSortUpDown1_5.Color, 20%)
+        HoverFill: =IconSortUpDown1_5.Fill
+        Icon: =Icon.Sort
+        OnSelect: |-
+            =UpdateContext({SortDescending1: !SortDescending1})
+        PaddingBottom: =26
+        PaddingLeft: =26
+        PaddingRight: =26
+        PaddingTop: =26
+        PressedBorderColor: =ColorFade(IconSortUpDown1_5.BorderColor, -20%)
+        PressedColor: =ColorFade(IconSortUpDown1_5.Color, -20%)
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        TabIndex: =0
+        Tooltip: =If(SortDescending1, "Classificar lista em ordem alfabética inversa", "Classificar lista em ordem alfabética")
+        Width: =88
+        X: =Parent.Width - IconNewItem1.Width - IconSortUpDown1_5.Width
+        ZIndex: =5
+
+    IconNewItem1_5 As icon.Add:
+        AccessibleLabel: =IconNewItem1_5.Tooltip
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconNewItem1_5.Fill
+        DisplayMode: =If(DataSourceInfo(Images, DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        FocusedBorderColor: =IconNewItem1_5.BorderColor
+        Height: =88
+        HoverBorderColor: =ColorFade(IconNewItem1_5.BorderColor, 20%)
+        HoverColor: =ColorFade(IconNewItem1_5.Color, 20%)
+        HoverFill: =IconNewItem1_5.Fill
+        Icon: =Icon.Add
+        OnSelect: =NewForm(EditForm1_1);Navigate('1_EditGaleria', ScreenTransition.None)
+        PaddingBottom: =24
+        PaddingLeft: =24
+        PaddingRight: =24
+        PaddingTop: =24
+        PressedBorderColor: =ColorFade(IconNewItem1_5.BorderColor, -20%)
+        PressedColor: =ColorFade(IconNewItem1_5.Color, -20%)
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        TabIndex: =0
+        Tooltip: ="Criar novo item"
+        Width: =88
+        X: =Parent.Width - IconNewItem1_5.Width
+        ZIndex: =6
+
+    TextSearchBox1_5 As text:
+        Align: =Left
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        DelayOutput: =true
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderColor: =TextSearchBox1_5.BorderColor
+        FocusedBorderThickness: =4
+        Height: =68
+        HintText: ="Itens de busca"
+        HoverBorderColor: =RGBA(197, 203, 207, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        PaddingLeft: =70
+        PressedBorderColor: =TextSearchBox1_5.HoverBorderColor
+        PressedColor: =TextSearchBox1_5.Color
+        PressedFill: =TextSearchBox1_5.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =7
+        RadiusTopLeft: =0
+        RadiusTopRight: =7
+        Size: =21
+        Visible: =false
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Height
+        ZIndex: =7
+
+    SearchIcon1_5 As icon.Search:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =SearchIcon1_5.Fill
+        FocusedBorderColor: =SearchIcon1_5.BorderColor
+        Height: =SearchIcon1_5.Width
+        HoverBorderColor: =ColorFade(SearchIcon1_5.BorderColor, 20%)
+        HoverColor: =ColorFade(SearchIcon1_5.Color, 20%)
+        HoverFill: =SearchIcon1_5.Fill
+        Icon: =Icon.Search
+        PaddingBottom: =14
+        PaddingLeft: =14
+        PaddingRight: =14
+        PaddingTop: =14
+        PressedBorderColor: =ColorFade(SearchIcon1_5.BorderColor, -20%)
+        PressedColor: =ColorFade(SearchIcon1_5.Color, -20%)
+        PressedFill: =SearchIcon1_5.Fill
+        Tooltip: ="Pesquisar"
+        Visible: =false
+        Width: =TextSearchBox1.Height
+        X: =TextSearchBox1.X
+        Y: =TextSearchBox1.Y
+        ZIndex: =8
+
+    IconBackarrow1_6 As icon.ChevronLeft:
+        AccessibleLabel: =IconBackarrow1_6.Tooltip
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconBackarrow1_6.Fill
+        FocusedBorderColor: =IconBackarrow1_6.BorderColor
+        Height: =88
+        HoverBorderColor: =ColorFade(IconBackarrow1_6.BorderColor, 20%)
+        HoverColor: =ColorFade(IconBackarrow1_6.Color, 20%)
+        HoverFill: =IconBackarrow1_6.Fill
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        PaddingBottom: =24
+        PaddingLeft: =24
+        PaddingRight: =24
+        PaddingTop: =24
+        PressedBorderColor: =ColorFade(IconBackarrow1_6.BorderColor, -20%)
+        PressedColor: =ColorFade(IconBackarrow1_6.Color, -20%)
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        TabIndex: =0
+        Tooltip: ="Voltar para a lista"
+        Width: =88
+        ZIndex: =9
+
+    "Gallery4 As gallery.'BrowseLayout_Flexible_SocialFeed_ver4.0'":
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =Gallery4.BorderColor
+        DisabledFill: =Gallery4.Fill
+        Height: =1048
+        HoverBorderColor: =Gallery4.BorderColor
+        HoverFill: =Gallery4.Fill
+        Items: =SortByColumns(Filter(Images, ID = DataCardValue17.Text), "Caption", If(SortDescending1, Descending, Ascending))
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =Gallery4.BorderColor
+        PressedBorderColor: =Gallery4.BorderColor
+        PressedFill: =Gallery4.Fill
+        TemplatePadding: =4
+        TemplateSize: =553
+        Y: =88
+        ZIndex: =10
+
+        TitleID As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =TitleID.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            HoverBorderColor: =TitleID.BorderColor
+            HoverColor: =TitleID.Color
+            HoverFill: =TitleID.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =TitleID.BorderColor
+            PressedColor: =TitleID.Color
+            PressedFill: =TitleID.Fill
+            Size: =20
+            Text: =ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =false
+            Width: =226
+            X: =235
+            Y: =477
+            ZIndex: =1
+
+        Title1_5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =Title1_5.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            HoverBorderColor: =Title1_5.BorderColor
+            HoverColor: =Title1_5.Color
+            HoverFill: =Title1_5.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =Title1_5.BorderColor
+            PressedColor: =Title1_5.Color
+            PressedFill: =Title1_5.Fill
+            Size: =20
+            Text: =ThisItem.Caption
+            VerticalAlign: =VerticalAlign.Top
+            Width: =346
+            X: =16
+            Y: =477
+            ZIndex: =2
+
+        TitleID_Image As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =TitleID_Image.BorderColor
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            HoverBorderColor: =TitleID_Image.BorderColor
+            HoverColor: =TitleID_Image.Color
+            HoverFill: =TitleID_Image.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =TitleID_Image.BorderColor
+            PressedColor: =TitleID_Image.Color
+            PressedFill: =TitleID_Image.Fill
+            Size: =20
+            Text: =Left(Right(ThisItem.Image,36),32)
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =false
+            Width: =512
+            X: =60
+            Y: =40
+            ZIndex: =3
+
+        Image1_8 As image:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderColor: =Image1_8.BorderColor
+            Height: =465
+            HoverBorderColor: =ColorFade(Image1_8.BorderColor, 20%)
+            HoverFill: =ColorFade(Image1_8.Fill, 20%)
+            Image: =ThisItem.Image
+            OnSelect: |-
+                =Image4;UpdateContext({MyBigPicShow:true})
+            PressedBorderColor: =ColorFade(Image1_8.BorderColor, -20%)
+            PressedFill: =ColorFade(Image1_8.Fill, -20%)
+            Width: =627
+            ZIndex: =4
+
+        Separator1_5 As rectangle:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            DisabledFill: =Separator1_5.Fill
+            Fill: =RGBA(197, 203, 207, 1)
+            FocusedBorderColor: =Separator1_5.BorderColor
+            Height: =1
+            HoverFill: =Separator1_5.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =Separator1_5.Fill
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        IconDelete1_1 As icon.Trash:
+            AccessibleLabel: =IconDelete1_1.Tooltip
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            DisabledFill: =IconDelete1_1.Fill
+            DisplayMode: =If(!IsBlank(Gallery4.Selected) && DataSourceInfo(Images, DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
+            FocusedBorderColor: =IconDelete1_1.BorderColor
+            Height: =88
+            HoverBorderColor: =ColorFade(IconDelete1_1.BorderColor, 20%)
+            HoverColor: =ColorFade(IconDelete1_1.Color, 20%)
+            HoverFill: =IconDelete1_1.Fill
+            Icon: =Icon.Trash
+            OnSelect: =ExcluirArquivo.Run(TitleID_Image.Text&".jpg");Remove(Images, Gallery4.Selected)
+            PaddingBottom: =24
+            PaddingLeft: =24
+            PaddingRight: =24
+            PaddingTop: =24
+            PressedBorderColor: =ColorFade(IconDelete1_1.BorderColor, -20%)
+            PressedColor: =ColorFade(IconDelete1_1.Color, -20%)
+            PressedFill: =RGBA(255, 255, 255, 0.3)
+            TabIndex: =0
+            Tooltip: ="Excluir esse item"
+            Width: =88
+            X: =520
+            Y: =454
+            ZIndex: =6
+
+    Image4 As image:
+        AutoDisableOnSelect: =false
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(29, 29, 29, 1)
+        DisabledFill: =RGBA(29, 29, 29, 1)
+        Fill: =RGBA(29, 29, 29, 1)
+        FocusedBorderColor: =Image4.BorderColor
+        Height: =1136
+        HoverBorderColor: =ColorFade(Image4.BorderColor, 20%)
+        HoverFill: =ColorFade(Image4.Fill, 0%)
+        Image: =Image1_8
+        OnSelect: =
+        PressedBorderColor: =ColorFade(Image4.BorderColor, -20%)
+        PressedFill: =ColorFade(Image4.Fill, 0%)
+        Visible: =If(Len(Text(MyBigPicShow)) = 0,false,MyBigPicShow)
+        Width: =640
+        ZIndex: =11
+
+    Icon1 As icon.Cancel:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =Icon1.Fill
+        FocusedBorderColor: =Icon1.BorderColor
+        HoverBorderColor: =ColorFade(Icon1.BorderColor, 20%)
+        HoverColor: =ColorFade(Icon1.Color, 20%)
+        HoverFill: =Icon1.Fill
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({MyBigPicShow:false})
+        PressedBorderColor: =ColorFade(Icon1.BorderColor, -20%)
+        PressedColor: =ColorFade(Icon1.Color, -20%)
+        PressedFill: =Icon1.Fill
+        Visible: =If(Len(Text(MyBigPicShow)) = 0,false,MyBigPicShow)
+        X: =552
+        Y: =24
+        ZIndex: =13
+
+    Button2 As button:
+        BorderColor: =ColorFade(Button2.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =Button2.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =ColorFade(Button2.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: |-
+            =Download("https://grupocosentino-my.sharepoint.com/personal/pteixeira_cosentino_com/_layouts/15/onedrive.aspx?originalPath=aHR0cHM6Ly9ncnVwb2Nvc2VudGluby1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC9wdGVpeGVpcmFfY29zZW50aW5vX2NvbS9FdjRBQXVpRUpZRkdyZG9uVTFPcHYzY0IxOVE0Sk1kYlRWWWxrX3ZUWnBIQ2hBP3J0aW1lPXNEYU8wVHRIMTBn&id=%2Fpersonal%2Fpteixeira%5Fcosentino%5Fcom%2FDocuments%2FInvent%C3%A1rio%20Ativos%20de%20TI%2FImagens%5Fimages%2F"&TitleID_Image&"%2Ejpg&parent=%2Fpersonal%2Fpteixeira%5Fcosentino%5Fcom%2FDocuments%2FInvent%C3%A1rio%20Ativos%20de%20TI%2FImagens%5Fimages")
+        PressedBorderColor: =Button2.Fill
+        PressedColor: =Button2.Fill
+        PressedFill: =Button2.Color
+        Size: =24
+        Text: ="Acessar imagem"
+        Visible: =If(Len(Text(MyBigPicShow)) = 0,false,MyBigPicShow)
+        Width: =280
+        X: =180
+        Y: =1023
+        ZIndex: =14
+
+    TimerRefreshImages As timer:
+        AutoStart: =true
+        Duration: =500000
+        Fill: =RGBA(100, 118, 132, 1)
+        Height: =46
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnTimerStart: =Refresh(Images)
+        Repeat: =true
+        Visible: =false
+        Width: =110
+        X: =511
+        Y: =97
+        ZIndex: =15
+

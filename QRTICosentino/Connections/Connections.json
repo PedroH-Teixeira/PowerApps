@@ -1,0 +1,121 @@
+{
+  "17e1cb2b-c96d-4543-932c-d7c573d9bfa4": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2665/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "dc0782f9-f170-4436-a841-e44bd6b66452",
+      "aa02a3a6-798a-4a4f-9c39-74c5a2e0a7b0"
+    ],
+    "id": "17e1cb2b-c96d-4543-932c-d7c573d9bfa4"
+  },
+  "aa02a3a6-798a-4a4f-9c39-74c5a2e0a7b0": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-22.westeurope.logic.azure.com:443/workflows/630c4da1e49149719b804177d905b098/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8Kvgy35NOyiksnt7kSRrN9_tDuXEbnMfJQJ1Ap3IyzQ",
+      "workflowEndpoint": "/subscriptions/b745f25e-91b5-4140-9d73-93b10b1dfb1d/resourceGroups/B57FA9185DB84BFD9B72D4783A392709-52C0970CF40F4AFAA3F01B90BBE641D1/providers/Microsoft.Logic/workflows/339e19ff-6d6a-447f-b46c-41485236f626",
+      "workflowName": "339e19ff-6d6a-447f-b46c-41485236f626",
+      "workflowPath": "/subscriptions/b745f25e-91b5-4140-9d73-93b10b1dfb1d/resourceGroups/B57FA9185DB84BFD9B72D4783A392709-52C0970CF40F4AFAA3F01B90BBE641D1/providers/Microsoft.Logic/workflows/339e19ff-6d6a-447f-b46c-41485236f626"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Fluxos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "17e1cb2b-c96d-4543-932c-d7c573d9bfa4": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "workflowName": {
+          "value": "339e19ff-6d6a-447f-b46c-41485236f626"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "17e1cb2b-c96d-4543-932c-d7c573d9bfa4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ExcluirArquivo"
+    ],
+    "dependencies": {
+      "shared_onedriveforbusiness": "17e1cb2b-c96d-4543-932c-d7c573d9bfa4"
+    },
+    "dependents": [],
+    "id": "aa02a3a6-798a-4a4f-9c39-74c5a2e0a7b0"
+  },
+  "dc0782f9-f170-4436-a841-e44bd6b66452": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1570/1.0.1570.2764/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "17e1cb2b-c96d-4543-932c-d7c573d9bfa4": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "17e1cb2b-c96d-4543-932c-d7c573d9bfa4"
+        }
+      }
+    },
+    "datasets": {
+      "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKLP7V3DLVWZZVHYUBZ3II77UAXW": {
+        "dataSources": {
+          "Images": {
+            "tableName": "Images"
+          }
+        }
+      },
+      "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKODWDR76VPGORFZTA6O4TBP5FDK": {
+        "dataSources": {
+          "Ativos": {
+            "tableName": "Ativos"
+          },
+          "Equipamentos": {
+            "tableName": "Equipamentos"
+          },
+          "Registros": {
+            "tableName": "Registros"
+          },
+          "Status": {
+            "tableName": "Status"
+          },
+          "TipoRegistro": {
+            "tableName": "TipoRegistro"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Ativos",
+      "Status",
+      "Equipamentos",
+      "Images",
+      "Registros",
+      "TipoRegistro"
+    ],
+    "dependencies": {
+      "fileSource": "17e1cb2b-c96d-4543-932c-d7c573d9bfa4"
+    },
+    "dependents": [],
+    "id": "dc0782f9-f170-4436-a841-e44bd6b66452"
+  }
+}

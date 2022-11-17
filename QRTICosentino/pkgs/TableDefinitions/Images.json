@@ -1,0 +1,7 @@
+{
+  "DataEntityMetadataJson": {
+    "Images": "{\"name\":\"Images\",\"title\":\"Images\",\"x-ms-permission\":\"read-write\",\"schema\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"Caption\":{\"type\":\"string\",\"x-ms-keyOrder\":0,\"x-ms-keyType\":\"none\",\"x-ms-sort\":\"none\",\"title\":\"Caption\"},\"Image\":{\"type\":\"string\",\"format\":\"uri\",\"x-ms-media-kind\":\"image\",\"x-ms-media-base-url\":\"https://europe-001.azure-apim.net/apim/onedriveforbusiness/6e614b1e3cc54cc4ba04a9a77fda2883/datasets/default\",\"x-ms-media-default-folder-path\":\"/drives/b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD/root:/Inventário Ativos de TI/Imagens_images\",\"x-ms-keyOrder\":0,\"x-ms-keyType\":\"none\",\"x-ms-sort\":\"none\",\"title\":\"Image\"},\"ID\":{\"type\":\"string\",\"x-ms-keyOrder\":0,\"x-ms-keyType\":\"none\",\"x-ms-sort\":\"none\",\"title\":\"ID\"},\"__PowerAppsId__\":{\"type\":\"string\",\"x-ms-keyOrder\":1,\"x-ms-keyType\":\"primary\",\"x-ms-sort\":\"none\",\"x-ms-permission\":\"read-only\",\"title\":\"Row id\"}}}}}"
+  },
+  "EntityName": "Images",
+  "TableName": "Images"
+}

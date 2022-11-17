@@ -1,0 +1,30 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2021-12-14T21:23:37.6260000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "DATA": "DATA",
+      "DESCRICAO": "DESCRICAO",
+      "EQUIPAMENTO": "EQUIPAMENTO",
+      "IMEI": "IMEI",
+      "INVENTARIO": "INVENTARIO",
+      "LINK": "LINK",
+      "MAC": "MAC",
+      "MODELO": "MODELO",
+      "SERIAL_x0020_NUMBER": "SERIAL NUMBER",
+      "STATUS": "STATUS",
+      "USUARIO": "USUARIO"
+    },
+    "DatasetName": "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKODWDR76VPGORFZTA6O4TBP5FDK",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Ativos",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

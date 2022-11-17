@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "339e19ff-6d6a-447f-b46c-41485236f626",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "ExcluirArquivo",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2019-10-22T17:53:48.6070000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "EQUIPAMENTO": "EQUIPAMENTO"
+    },
+    "DatasetName": "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKODWDR76VPGORFZTA6O4TBP5FDK",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Equipamentos",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

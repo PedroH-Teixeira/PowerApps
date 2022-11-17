@@ -1,0 +1,240 @@
+"'2_DetailRegistros' As screen.'phoneDetailViewLayout_ver3.0'":
+    Fill: =RGBA(29, 29, 29, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    Orientation: =If('2_DetailRegistros'.Width < '2_DetailRegistros'.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= '2_DetailRegistros'.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    IconBackarrow1_1 As icon.ChevronLeft:
+        AccessibleLabel: =IconBackarrow1_1.Tooltip
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconBackarrow1_1.Fill
+        FocusedBorderColor: =IconBackarrow1_1.BorderColor
+        Height: =88
+        HoverBorderColor: =ColorFade(IconBackarrow1_1.BorderColor, 20%)
+        HoverColor: =ColorFade(IconBackarrow1_1.Color, 20%)
+        HoverFill: =IconBackarrow1_1.Fill
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        PaddingBottom: =24
+        PaddingLeft: =24
+        PaddingRight: =24
+        PaddingTop: =24
+        PressedBorderColor: =ColorFade(IconBackarrow1_1.BorderColor, -20%)
+        PressedColor: =ColorFade(IconBackarrow1_1.Color, -20%)
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        TabIndex: =0
+        Tooltip: ="Voltar para a lista"
+        Width: =88
+        ZIndex: =1
+
+    IconDelete1_2 As icon.Trash:
+        AccessibleLabel: =IconDelete1_2.Tooltip
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconDelete1_2.Fill
+        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo(Ativos, DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        FocusedBorderColor: =IconDelete1_2.BorderColor
+        Height: =88
+        HoverBorderColor: =ColorFade(IconDelete1_2.BorderColor, 20%)
+        HoverColor: =ColorFade(IconDelete1_2.Color, 20%)
+        HoverFill: =IconDelete1_2.Fill
+        Icon: =Icon.Trash
+        OnSelect: =Back()
+        PaddingBottom: =24
+        PaddingLeft: =24
+        PaddingRight: =24
+        PaddingTop: =24
+        PressedBorderColor: =ColorFade(IconDelete1_2.BorderColor, -20%)
+        PressedColor: =ColorFade(IconDelete1_2.Color, -20%)
+        PressedFill: =RGBA(255, 255, 255, 0.3)
+        TabIndex: =0
+        Tooltip: ="Excluir esse item"
+        Visible: =false
+        Width: =88
+        X: =
+        ZIndex: =2
+
+    LblAppName2_1 As label:
+        Align: =Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LblAppName2_1.BorderColor
+        Height: =88
+        HoverBorderColor: =LblAppName2_1.BorderColor
+        HoverColor: =LblAppName2_1.Color
+        HoverFill: =LblAppName2_1.Fill
+        PressedBorderColor: =LblAppName2_1.BorderColor
+        PressedColor: =LblAppName2_1.Color
+        PressedFill: =LblAppName2_1.Fill
+        Size: =27
+        Text: ="Recibo"
+        Width: =
+        Wrap: =false
+        X: =IconBackarrow1_1.X + IconBackarrow1_1.Width
+        ZIndex: =3
+
+    DetailForm1_1 As formViewer:
+        AcceptsFocus: =false
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DataSource: =Registros
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height - DetailForm1_1.Y
+        Item: =BrowseGallery1_1.Selected
+        Width: =Parent.Width
+        Y: =
+        ZIndex: =4
+
+        TIPO_DataCard3 As typedDataCard.textualViewCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TIPO"
+            Default: =ThisItem.TIPO
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Registros],DataSourceInfo.DisplayName,"TIPO")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1047
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardValueRecebido As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =67
+                Size: =18
+                Text: |-
+                    =Concatenate("Recebido por: ",ThisItem.RECEBIDO)
+                Width: =489
+                X: =151
+                Y: =780
+                ZIndex: =2
+
+            DataCardValueEntregue As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =70
+                Size: =18
+                Text: |-
+                    =Concatenate("Entregue por: ",ThisItem.ENTREGUE)
+                Width: =489
+                X: =151
+                Y: =495
+                ZIndex: =3
+
+            LabelRecibo As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =39
+                Size: =21
+                Text: =Concatenate("Recido de ",Parent.Default," Equipamento")
+                Width: =489
+                X: =151
+                Y: =156
+                ZIndex: =7
+
+            ImgAssEntregue As image:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =200
+                Image: =ThisItem.Image
+                Width: =320
+                X: =235
+                Y: =580
+                ZIndex: =14
+
+            ImgAssRecebido As image:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =200
+                Image: =ThisItem.Image2
+                Width: =320
+                X: =235
+                Y: =847
+                ZIndex: =15
+
+            HtmlTextDeclaracao As htmlViewer:
+                AutoHeight: =true
+                Height: =148
+                HtmlText: =Concatenate("&emsp;&emsp;","Declaro que recebi no dia ","<b>",Body1_3,"</b>"," o equipamento ","<b>",DataCardValue8,"</b>"," de número de série ","<b>",DataCardValue17,"<b>")
+                Size: =17
+                Width: =531
+                X: =128
+                Y: =264
+                ZIndex: =16
+
+    PrintButton2_1 As label:
+        Align: =Align.Center
+        Color: =ColorFade(RGBA(0, 134, 208, 1), 30%)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =32
+        OnSelect: =Print()
+        Size: =13
+        TabIndex: =0
+        Text: ="Imprimir"
+        Visible: =Not(Parent.Printing)
+        Width: =96
+        X: =Parent.Width - Self.Width - 25
+        Y: =25
+        ZIndex: =5
+
+    Icon3 As icon.ChevronLeft:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =45
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Visible: =!'2_DetailRegistros'.Printing
+        Width: =60
+        X: =28
+        Y: =25
+        ZIndex: =6
+
+    Image1_11 As image:
+        AccessibleLabel: =
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =Image1_11.BorderColor
+        Height: =135
+        HoverBorderColor: =ColorFade(Image1_11.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1_11.Fill, 20%)
+        Image: =cosentinoxl
+        PressedBorderColor: =ColorFade(Image1_11.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1_11.Fill, -20%)
+        Transparency: =0.8
+        Width: =153
+        Y: =864
+        ZIndex: =7
+
+    Label3 As label:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =21
+        Text: ="IT Cosentino"
+        Width: =210
+        X: =309
+        Y: =70
+        ZIndex: =8
+

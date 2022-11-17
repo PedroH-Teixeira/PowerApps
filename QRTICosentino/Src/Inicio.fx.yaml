@@ -1,0 +1,299 @@
+Inicio As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    Orientation: =If(Inicio.Width < Inicio.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Inicio.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Image1 As image:
+        AccessibleLabel: =
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =Image1.BorderColor
+        Height: =643
+        HoverBorderColor: =ColorFade(Image1.BorderColor, 20%)
+        HoverFill: =ColorFade(Image1.Fill, 20%)
+        Image: =cosentinoxl
+        PressedBorderColor: =ColorFade(Image1.BorderColor, -20%)
+        PressedFill: =ColorFade(Image1.Fill, -20%)
+        Transparency: =0.9
+        Width: =640
+        Y: =292
+        ZIndex: =1
+
+    btScan As button:
+        BorderColor: =ColorFade(btScan.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btScan.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =ColorFade(btScan.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Scanner")
+        PressedBorderColor: =btScan.Fill
+        PressedColor: =btScan.Fill
+        PressedFill: =btScan.Color
+        Size: =24
+        Text: ="Scanner"
+        Width: =280
+        X: =175
+        Y: =935
+        ZIndex: =2
+
+    btDescarte As button:
+        BorderColor: =ColorFade(btDescarte.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btDescarte.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btDescarte.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Descarte")
+        PressedBorderColor: =btDescarte.Fill
+        PressedColor: =btDescarte.Fill
+        PressedFill: =btDescarte.Color
+        Size: =20
+        Text: ="Descarte"
+        Width: =210
+        X: =330
+        Y: =550
+        ZIndex: =3
+
+    btDisponivel As button:
+        BorderColor: =ColorFade(btDisponivel.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btDisponivel.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btDisponivel.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Disponível")
+        PressedBorderColor: =btDisponivel.Fill
+        PressedColor: =btDisponivel.Fill
+        PressedFill: =btDisponivel.Color
+        Size: =20
+        Text: ="Disponível"
+        Width: =210
+        X: =100
+        Y: =440
+        ZIndex: =4
+
+    btEntrada As button:
+        BorderColor: =ColorFade(btEntrada.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btEntrada.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btEntrada.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Entrada")
+        PressedBorderColor: =btEntrada.Fill
+        PressedColor: =btEntrada.Fill
+        PressedFill: =btEntrada.Color
+        Size: =20
+        Text: ="Entrada"
+        Width: =210
+        X: =330
+        Y: =220
+        ZIndex: =5
+
+    btAtivos As button:
+        BorderColor: =ColorFade(btAtivos.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btAtivos.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btAtivos.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Ativos")
+        PressedBorderColor: =btAtivos.Fill
+        PressedColor: =btAtivos.Fill
+        PressedFill: =btAtivos.Color
+        Size: =20
+        Text: ="Ativos Geral"
+        Width: =210
+        X: =100
+        Y: =220
+        ZIndex: =6
+
+    Titulo As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =Titulo.BorderColor
+        Font: =Font.Georgia
+        Height: =70
+        HoverBorderColor: =Titulo.BorderColor
+        HoverColor: =Titulo.Color
+        HoverFill: =Titulo.Fill
+        PressedBorderColor: =Titulo.BorderColor
+        PressedColor: =Titulo.Color
+        PressedFill: =Titulo.Fill
+        Size: =28
+        Text: ="Inventário TI Cosentino"
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+    btReservado As button:
+        BorderColor: =ColorFade(btReservado.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btReservado.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btReservado.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Reservado")
+        PressedBorderColor: =btReservado.Fill
+        PressedColor: =btReservado.Fill
+        PressedFill: =btReservado.Color
+        Size: =20
+        Text: ="Reservado"
+        Width: =210
+        X: =100
+        Y: =550
+        ZIndex: =8
+
+    btManutenção As button:
+        BorderColor: =ColorFade(btManutenção.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btManutenção.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btManutenção.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Manutenção")
+        PressedBorderColor: =btManutenção.Fill
+        PressedColor: =btManutenção.Fill
+        PressedFill: =btManutenção.Color
+        Size: =20
+        Text: ="Manutenção"
+        Width: =210
+        X: =330
+        Y: =440
+        ZIndex: =9
+
+    btSaida As button:
+        BorderColor: =ColorFade(btSaida.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btSaida.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btSaida.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Saída")
+        PressedBorderColor: =btSaida.Fill
+        PressedColor: =btSaida.Fill
+        PressedFill: =btSaida.Color
+        Size: =20
+        Text: ="Saída"
+        Width: =210
+        X: =330
+        Y: =330
+        ZIndex: =10
+
+    btBaixa As button:
+        BorderColor: =ColorFade(btBaixa.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btBaixa.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btBaixa.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Baixa Definitiva")
+        PressedBorderColor: =btBaixa.Fill
+        PressedColor: =btBaixa.Fill
+        PressedFill: =btBaixa.Color
+        Size: =20
+        Text: ="Baixa Definitiva"
+        Width: =210
+        X: =330
+        Y: =660
+        ZIndex: =11
+
+    btInventário As button:
+        BorderColor: =ColorFade(btInventário.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btInventário.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btInventário.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Ativos sem Inventário")
+        PressedBorderColor: =btInventário.Fill
+        PressedColor: =btInventário.Fill
+        PressedFill: =btInventário.Color
+        Size: =20
+        Text: ="Ativos sem Inventário"
+        Width: =210
+        X: =100
+        Y: =330
+        ZIndex: =12
+
+    btRetirar As button:
+        BorderColor: =ColorFade(btRetirar.Fill, -15%)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FocusedBorderColor: =btRetirar.BorderColor
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =ColorFade(btRetirar.BorderColor, 20%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: =Navigate('1_Equipamentos');Set(TipoAtivo,"Retirar no Almoxarifado")
+        PressedBorderColor: =btRetirar.Fill
+        PressedColor: =btRetirar.Fill
+        PressedFill: =btRetirar.Color
+        Size: =20
+        Text: ="Retirar no Almox."
+        Width: =210
+        X: =100
+        Y: =660
+        ZIndex: =13
+

@@ -1,0 +1,9 @@
+App As appinfo:
+    BackEnabled: =false
+    MinScreenHeight: =320
+    MinScreenWidth: =320
+    OnStart: =
+
+    AppConditional0 As AppConditional0:
+        App_INTERNAL_PROPERTY_NAME_0: =
+
