@@ -1,0 +1,26 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2019-10-22T17:53:48.6070000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Centro_x0020_de_x0020_custo": "Centro de custo",
+      "Código_x0020_do_x0020_Produto": "Código do Produto",
+      "Data": "Data",
+      "Nome_x0020_do_x0020_Material": "Nome do Material",
+      "Nome_x0020_do_x0020_Usuário": "Nome do Usuário",
+      "Quantidade": "Quantidade",
+      "Tipo_x0020_de_x0020_Registro": "Tipo de Registro"
+    },
+    "DatasetName": "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKIPYKQ46P2RTBHKOMZKAG5PDZFK",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Registro",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2019-10-22T17:53:48.6070000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Baixa_x0020_para_x0020_Centro_x0020_de_x0020_Custo": "Baixa para Centro de Custo",
+      "Código_x0020_de_x0020_Posição": "Código de Posição",
+      "Código_x0020_do_x0020_Fabricante_x0020_": "Código do Fabricante ",
+      "Código_x0020_SAP_x0020_do_x0020_Material": "Código SAP do Material",
+      "Data_x0020_de_x0020_Inventário_x0020_1": "Data de Inventário 1",
+      "Data_x0020_de_x0020_Inventário_x0020_2": "Data de Inventário 2",
+      "Data_x0020_Ultima_x0020_Modificação": "Data Ultima Modificação",
+      "Depósito": "Depósito",
+      "Descrição_x0020_do_x0020_Material": "Descrição do Material",
+      "Equipamento": "Equipamento",
+      "Estoque_x0020_Max": "Estoque Max",
+      "Estoque_x0020_Min": "Estoque Min",
+      "Fabricante": "Fabricante",
+      "Image": "Image",
+      "Inventário_x0020_1": "Inventário 1",
+      "Inventário_x0020_2": "Inventário 2",
+      "Ponto_x0020_de_x0020_reposição": "Ponto de reposição",
+      "Quantidade_x0020_em_x0020_estoque": "Quantidade em estoque",
+      "Unidade": "Unidade"
+    },
+    "DatasetName": "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKNEIYMIXOBNOZHKUB6IM34B5ITI",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Almoxarifado",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,378 @@
+Inicio As screen:
+    BackgroundImage: =
+    Fill: =RGBA(234, 234, 234, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+    Orientation: =If(Inicio.Width < Inicio.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= Inicio.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    LabelEmail As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelEmail.BorderColor
+        Font: =Font.'Lato Black'
+        Height: =96
+        HoverBorderColor: =LabelEmail.BorderColor
+        HoverColor: =LabelEmail.Color
+        HoverFill: =LabelEmail.Fill
+        PressedBorderColor: =LabelEmail.BorderColor
+        PressedColor: =LabelEmail.Color
+        PressedFill: =LabelEmail.Fill
+        Size: =20
+        Text: ="almoxarifado-brasil@cosentino.com"
+        Width: =640
+        Y: =1034
+        ZIndex: =1
+
+    LabelControleDeEstoque As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelControleDeEstoque.BorderColor
+        Font: =Font.'Lato Black'
+        Height: =96
+        HoverBorderColor: =LabelControleDeEstoque.BorderColor
+        HoverColor: =LabelControleDeEstoque.Color
+        HoverFill: =LabelControleDeEstoque.Fill
+        PressedBorderColor: =LabelControleDeEstoque.BorderColor
+        PressedColor: =LabelControleDeEstoque.Color
+        PressedFill: =LabelControleDeEstoque.Fill
+        Size: =45
+        Text: ="Controle de Estoque"
+        Width: =640
+        Y: =309
+        ZIndex: =2
+
+    LogotipoCosentino As image:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =LogotipoCosentino.BorderColor
+        Height: =118
+        HoverBorderColor: =ColorFade(LogotipoCosentino.BorderColor, 20%)
+        HoverFill: =ColorFade(LogotipoCosentino.Fill, 20%)
+        Image: ='Logo Cosentino'
+        PressedBorderColor: =ColorFade(LogotipoCosentino.BorderColor, -20%)
+        PressedFill: =ColorFade(LogotipoCosentino.Fill, -20%)
+        Width: =580
+        X: =30
+        Y: =37
+        ZIndex: =3
+
+    LabelCentroDeCusto As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelCentroDeCusto.BorderColor
+        Height: =55
+        HoverBorderColor: =LabelCentroDeCusto.BorderColor
+        HoverColor: =LabelCentroDeCusto.Color
+        HoverFill: =LabelCentroDeCusto.Fill
+        PressedBorderColor: =LabelCentroDeCusto.BorderColor
+        PressedColor: =LabelCentroDeCusto.Color
+        PressedFill: =LabelCentroDeCusto.Fill
+        Size: =16
+        Text: ="Centro de Custo"
+        Width: =100
+        X: =413
+        Y: =799
+        ZIndex: =4
+
+    IconCentroDeCusto As icon.Money:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconCentroDeCusto.Fill
+        FocusedBorderColor: =IconCentroDeCusto.BorderColor
+        Height: =134
+        HoverBorderColor: =ColorFade(IconCentroDeCusto.BorderColor, 20%)
+        HoverColor: =ColorFade(IconCentroDeCusto.Color, 20%)
+        HoverFill: =IconCentroDeCusto.Fill
+        Icon: =Icon.Money
+        OnSelect: =Navigate(CentroDeCusto)
+        PressedBorderColor: =ColorFade(IconCentroDeCusto.BorderColor, -20%)
+        PressedColor: =ColorFade(IconCentroDeCusto.Color, -20%)
+        PressedFill: =IconCentroDeCusto.Fill
+        Width: =103
+        X: =410
+        Y: =674
+        ZIndex: =5
+
+    LabelInventario02 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelInventario02.BorderColor
+        HoverBorderColor: =LabelInventario02.BorderColor
+        HoverColor: =LabelInventario02.Color
+        HoverFill: =LabelInventario02.Fill
+        PressedBorderColor: =LabelInventario02.BorderColor
+        PressedColor: =LabelInventario02.Color
+        PressedFill: =LabelInventario02.Fill
+        Size: =16
+        Text: ="Inventário 02"
+        Width: =122
+        X: =259
+        Y: =808
+        ZIndex: =6
+
+    ImgInventario02 As image:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =ImgInventario02.BorderColor
+        Height: =130
+        HoverBorderColor: =ColorFade(ImgInventario02.BorderColor, 20%)
+        HoverFill: =ColorFade(ImgInventario02.Fill, 20%)
+        Image: ='Icone Lista de Equip'
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Navigate(Inventario);Set(TipoProduto,"Inventario2")
+        PressedBorderColor: =ColorFade(ImgInventario02.BorderColor, -20%)
+        PressedFill: =ColorFade(ImgInventario02.Fill, -20%)
+        X: =270
+        Y: =678
+        ZIndex: =7
+
+    IconInventario02Invisivel As icon.DocumentwithContent:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconInventario02Invisivel.Fill
+        FocusedBorderColor: =IconInventario02Invisivel.BorderColor
+        Height: =129
+        HoverBorderColor: =ColorFade(IconInventario02Invisivel.BorderColor, 20%)
+        HoverColor: =ColorFade(IconInventario02Invisivel.Color, 20%)
+        HoverFill: =IconInventario02Invisivel.Fill
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(Inventario);Set(TipoProduto,"Inventario2")
+        PressedBorderColor: =ColorFade(IconInventario02Invisivel.BorderColor, -20%)
+        PressedColor: =ColorFade(IconInventario02Invisivel.Color, -20%)
+        PressedFill: =IconInventario02Invisivel.Fill
+        Width: =100
+        X: =270
+        Y: =679
+        ZIndex: =8
+
+    LabelInventario01 As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelInventario01.BorderColor
+        HoverBorderColor: =LabelInventario01.BorderColor
+        HoverColor: =LabelInventario01.Color
+        HoverFill: =LabelInventario01.Fill
+        PressedBorderColor: =LabelInventario01.BorderColor
+        PressedColor: =LabelInventario01.Color
+        PressedFill: =LabelInventario01.Fill
+        Size: =16
+        Text: ="Inventário 01"
+        Width: =118
+        X: =121
+        Y: =808
+        ZIndex: =9
+
+    ImgInventario01 As image:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =ImgInventario01.BorderColor
+        Height: =130
+        HoverBorderColor: =ColorFade(ImgInventario01.BorderColor, 20%)
+        HoverFill: =ColorFade(ImgInventario01.Fill, 20%)
+        Image: ='Icone Lista de Equip'
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Navigate(Inventario);Set(TipoProduto,"Inventario1")
+        PressedBorderColor: =ColorFade(ImgInventario01.BorderColor, -20%)
+        PressedFill: =ColorFade(ImgInventario01.Fill, -20%)
+        X: =130
+        Y: =678
+        ZIndex: =10
+
+    IconInventario01Invisivel As icon.DocumentwithContent:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconInventario01Invisivel.Fill
+        FocusedBorderColor: =IconInventario01Invisivel.BorderColor
+        Height: =129
+        HoverBorderColor: =ColorFade(IconInventario01Invisivel.BorderColor, 20%)
+        HoverColor: =ColorFade(IconInventario01Invisivel.Color, 20%)
+        HoverFill: =IconInventario01Invisivel.Fill
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(Inventario);Set(TipoProduto,"Inventario1")
+        PressedBorderColor: =ColorFade(IconInventario01Invisivel.BorderColor, -20%)
+        PressedColor: =ColorFade(IconInventario01Invisivel.Color, -20%)
+        PressedFill: =IconInventario01Invisivel.Fill
+        Width: =100
+        X: =130
+        Y: =679
+        ZIndex: =11
+
+    LabelSaida As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelSaida.BorderColor
+        HoverBorderColor: =LabelSaida.BorderColor
+        HoverColor: =LabelSaida.Color
+        HoverFill: =LabelSaida.Fill
+        PressedBorderColor: =LabelSaida.BorderColor
+        PressedColor: =LabelSaida.Color
+        PressedFill: =LabelSaida.Fill
+        Size: =16
+        Text: ="Saída"
+        Width: =100
+        X: =410
+        Y: =627
+        ZIndex: =12
+
+    ImgSaida As image:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =ImgSaida.BorderColor
+        HoverBorderColor: =ColorFade(ImgSaida.BorderColor, 20%)
+        HoverFill: =ColorFade(ImgSaida.Fill, 20%)
+        Image: ='Icone Saida'
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Navigate(BrowseScreen1);Set(TipoProduto,"Saida_Produto")
+        PressedBorderColor: =ColorFade(ImgSaida.BorderColor, -20%)
+        PressedFill: =ColorFade(ImgSaida.Fill, -20%)
+        X: =410
+        Y: =527
+        ZIndex: =13
+
+    IconSaidaInvisivel As icon.DocumentwithContent:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconSaidaInvisivel.Fill
+        FocusedBorderColor: =IconSaidaInvisivel.BorderColor
+        Height: =113
+        HoverBorderColor: =ColorFade(IconSaidaInvisivel.BorderColor, 20%)
+        HoverColor: =ColorFade(IconSaidaInvisivel.Color, 20%)
+        HoverFill: =IconSaidaInvisivel.Fill
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(BrowseScreen1);Set(TipoProduto,"Saida_Produto")
+        PressedBorderColor: =ColorFade(IconSaidaInvisivel.BorderColor, -20%)
+        PressedColor: =ColorFade(IconSaidaInvisivel.Color, -20%)
+        PressedFill: =IconSaidaInvisivel.Fill
+        Width: =100
+        X: =410
+        Y: =514
+        ZIndex: =14
+
+    LabelEstoque As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelEstoque.BorderColor
+        HoverBorderColor: =LabelEstoque.BorderColor
+        HoverColor: =LabelEstoque.Color
+        HoverFill: =LabelEstoque.Fill
+        PressedBorderColor: =LabelEstoque.BorderColor
+        PressedColor: =LabelEstoque.Color
+        PressedFill: =LabelEstoque.Fill
+        Size: =16
+        Text: ="Estoque"
+        Width: =100
+        X: =270
+        Y: =630
+        ZIndex: =15
+
+    IconEstoque As icon.DocumentwithContent:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconEstoque.Fill
+        FocusedBorderColor: =IconEstoque.BorderColor
+        Height: =167
+        HoverBorderColor: =ColorFade(IconEstoque.BorderColor, 20%)
+        HoverColor: =ColorFade(IconEstoque.Color, 20%)
+        HoverFill: =IconEstoque.Fill
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(BrowseScreen1);Set(TipoProduto, "Produtos")
+        PressedBorderColor: =ColorFade(IconEstoque.BorderColor, -20%)
+        PressedColor: =ColorFade(IconEstoque.Color, -20%)
+        PressedFill: =IconEstoque.Fill
+        Width: =144
+        X: =248
+        Y: =478
+        ZIndex: =16
+
+    LabelEntrada As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(164, 38, 44, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderColor: =LabelEntrada.BorderColor
+        HoverBorderColor: =LabelEntrada.BorderColor
+        HoverColor: =LabelEntrada.Color
+        HoverFill: =LabelEntrada.Fill
+        PressedBorderColor: =LabelEntrada.BorderColor
+        PressedColor: =LabelEntrada.Color
+        PressedFill: =LabelEntrada.Fill
+        Size: =16
+        Text: ="Entrada"
+        Width: =100
+        X: =130
+        Y: =627
+        ZIndex: =17
+
+    ImgEntrada As image:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderColor: =ImgEntrada.BorderColor
+        HoverBorderColor: =ColorFade(ImgEntrada.BorderColor, 20%)
+        HoverFill: =ColorFade(ImgEntrada.Fill, 20%)
+        Image: ='Icone Entrada'
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Navigate(BrowseScreen1);Set(TipoProduto,"Entrada_Produto")
+        PressedBorderColor: =ColorFade(ImgEntrada.BorderColor, -20%)
+        PressedFill: =ColorFade(ImgEntrada.Fill, -20%)
+        X: =130
+        Y: =527
+        ZIndex: =18
+
+    IconEntradaInvisivel As icon.DocumentwithContent:
+        BorderColor: =RGBA(89, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =IconEntradaInvisivel.Fill
+        FocusedBorderColor: =IconEntradaInvisivel.BorderColor
+        Height: =113
+        HoverBorderColor: =ColorFade(IconEntradaInvisivel.BorderColor, 20%)
+        HoverColor: =ColorFade(IconEntradaInvisivel.Color, 20%)
+        HoverFill: =IconEntradaInvisivel.Fill
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(BrowseScreen1);Set(TipoProduto,"Entrada_Produto")
+        PressedBorderColor: =ColorFade(IconEntradaInvisivel.BorderColor, -20%)
+        PressedColor: =ColorFade(IconEntradaInvisivel.Color, -20%)
+        PressedFill: =IconEntradaInvisivel.Fill
+        Width: =100
+        X: =130
+        Y: =516
+        ZIndex: =19
+

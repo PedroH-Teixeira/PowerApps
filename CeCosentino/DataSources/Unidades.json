@@ -1,0 +1,20 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2019-10-22T17:53:48.6070000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Unidades": "Unidades (Unidades)"
+    },
+    "DatasetName": "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKNEIYMIXOBNOZHKUB6IM34B5ITI",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Unidades",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "18bd1290-f05e-4a17-bdb9-3dc761e7c9b6": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-51.westeurope.logic.azure.com:443/workflows/d513eaad11494d1fa5f4e2e22ba75d17/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hC7kIbsv4UU29p-kDoa8uDA0eI70OIm7OEaMWCwSwtE",
+      "workflowEndpoint": "/subscriptions/b745f25e-91b5-4140-9d73-93b10b1dfb1d/resourceGroups/B57FA9185DB84BFD9B72D4783A392709-52C0970CF40F4AFAA3F01B90BBE641D1/providers/Microsoft.Logic/workflows/9ee79ece-13f0-4ccd-961a-1ba35e629b14",
+      "workflowName": "9ee79ece-13f0-4ccd-961a-1ba35e629b14",
+      "workflowPath": "/subscriptions/b745f25e-91b5-4140-9d73-93b10b1dfb1d/resourceGroups/B57FA9185DB84BFD9B72D4783A392709-52C0970CF40F4AFAA3F01B90BBE641D1/providers/Microsoft.Logic/workflows/9ee79ece-13f0-4ccd-961a-1ba35e629b14"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Fluxos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "e8c9e4a2-06cf-40df-a126-8466ed3f41e2": {
+          "value": "shared_sendmail"
+        },
+        "workflowName": {
+          "value": "9ee79ece-13f0-4ccd-961a-1ba35e629b14"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sendmail": {
+          "value": "e8c9e4a2-06cf-40df-a126-8466ed3f41e2"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "BotãoEnviaEmail"
+    ],
+    "dependencies": {
+      "shared_sendmail": "e8c9e4a2-06cf-40df-a126-8466ed3f41e2"
+    },
+    "dependents": [],
+    "id": "18bd1290-f05e-4a17-bdb9-3dc761e7c9b6"
+  },
+  "7d68262e-4b16-4842-876e-61dfaa1fdd83": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1533/1.0.1533.2600/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "aed90544-f0f5-43d4-9dd5-c8344307f418": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "aed90544-f0f5-43d4-9dd5-c8344307f418"
+        }
+      }
+    },
+    "datasets": {
+      "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKIPYKQ46P2RTBHKOMZKAG5PDZFK": {
+        "dataSources": {
+          "Registro": {
+            "tableName": "Registro"
+          }
+        }
+      },
+      "b!jpLXIe6snk6JcpuQwNkofKaEwpk2oyRPu0xO8ePEG9htqXFLpdgNQLwi7ywcmpxD.01CQ66GKNEIYMIXOBNOZHKUB6IM34B5ITI": {
+        "dataSources": {
+          "Almoxarifado": {
+            "tableName": "Almoxarifado"
+          },
+          "Deposito": {
+            "tableName": "Deposito"
+          },
+          "TabCentroDeCusto": {
+            "tableName": "TabCentroDeCusto"
+          },
+          "Unidades": {
+            "tableName": "Unidades"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Almoxarifado",
+      "Unidades",
+      "Registro",
+      "Deposito",
+      "TabCentroDeCusto"
+    ],
+    "dependencies": {
+      "fileSource": "aed90544-f0f5-43d4-9dd5-c8344307f418"
+    },
+    "dependents": [],
+    "id": "7d68262e-4b16-4842-876e-61dfaa1fdd83"
+  },
+  "aed90544-f0f5-43d4-9dd5-c8344307f418": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1528/1.0.1528.2589/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "7d68262e-4b16-4842-876e-61dfaa1fdd83"
+    ],
+    "id": "aed90544-f0f5-43d4-9dd5-c8344307f418"
+  },
+  "e8c9e4a2-06cf-40df-a126-8466ed3f41e2": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Email",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1528/1.0.1528.2589/sendmail/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sendmail",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "18bd1290-f05e-4a17-bdb9-3dc761e7c9b6"
+    ],
+    "id": "e8c9e4a2-06cf-40df-a126-8466ed3f41e2"
+  }
+}
